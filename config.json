@@ -1,0 +1,12 @@
+{
+	"serialPort":"/dev/ttyUSB0",
+	"httpPort":"80",
+	"normalModeEndpoint":"normal",
+	"hardLockModeEndpoint":"block",
+	"closeEndpoint":"close",
+	"openEndpoint":"open",
+	"addKeyEndpoint":"addkey",
+	"deleteKeyEndpoint":"deletekey",
+	"readKeysEndpoint":"readkeys",
+	"logFilePath":"skud-go.log"
+}
