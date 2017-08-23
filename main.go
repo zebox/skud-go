@@ -56,17 +56,17 @@ func main() {
 	}
 	db.Close()
 
-	// c := &serial.Config{Name: config.SerialPort, Baud: 9600}
-	// s, err := serial.OpenPort(c)
+	c := &serial.Config{Name: config.SerialPort, Baud: 9600}
+	s, err := serial.OpenPort(c)
 
-	// if err != nil {
-	// 	fmt.Printf("Error open serial port %s ", err.Error())
-	// 	log.Fatal(err)
+	if err != nil {
+		fmt.Printf("Error open serial port %s ", err.Error())
+		log.Fatal(err)
 
-	// }
-	// serialPort = s
+	}
+	serialPort = s
 	ch := make(chan bool) // wait chanel until key is valid
-	//go getData(ch, s)
+	go getData(ch, s)
 
 	for {
 		time.Sleep(time.Second)
